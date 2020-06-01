@@ -1,0 +1,111 @@
+html {
+    --primary-color: #e73333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.userCard {
+    margin: 10px;
+    min-width: 300px;
+    width: 20vw;
+    max-width: 420px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0;
+
+    --image-size: 150px;
+    --flag-size: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userImagesWrapper {
+    position: relative;
+    margin: 20px 0;
+}
+
+.userPhoto {
+    height: var(--image-size);
+    width: var(--image-size);
+    border-radius: 50%;
+    border: 8px solid #efefef;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.userNationality {
+    height: var(--flag-size);
+    width: var(--flag-size);
+    border: 5px solid white;
+    box-shadow: 0 0 1px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.userInfoWrapper {
+    padding: 0 30px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.userName {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.userProfession {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.userInfo {
+    display: block;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+.userContactsWrapper {
+    width: 100%;
+    font-size: 0;
+    padding: 0 4%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.userContacts {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 20%;
+    padding: 30px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.userContacts + .userContacts {
+    padding-left: 4%;
+}
+
+.contactIcon {
+    height: 20px;
+    width: 20px;
+}
+
+svg.contactIcon > path {
+    fill: var(--primary-color);
+}
